@@ -16,7 +16,7 @@ Daftar Isi
 5.  [Kompatibilitas](#Kompatibilitas)
 6.  [Contoh](#Contoh)
 7.  [Metode](#Metode)
-8.  [Metode utama](#Metode-utama)
+8.  [Metode utama dalam pustaka MyQR](#Metode-utama)
 9.  [Kesimpulan](#Kesimpulan)
 
 Pendahuluan
@@ -189,7 +189,7 @@ Contoh
     
     
 
-Metode utama :
+Metode utama
 ---------------------------------
 ## Metode utama dalam pustaka MyQR : 
     1. html(t)
