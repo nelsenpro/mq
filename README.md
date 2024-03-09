@@ -278,11 +278,8 @@ Metode utama
 
 Kesimpulan
 ----------
-
-Selamat! Anda telah menyelesaikan panduan lengkap menggunakan Pustaka JavaScript MyQR. Dengan pemahaman ini, Anda dapat dengan mudah mengintegrasikan MyQR ke dalam proyek web Anda untuk manipulasi DOM yang efisien dan interaksi yang ditingkatkan.
-
-Untuk informasi lebih lanjut, lihat dokumentasi resmi Pustaka MyQR di \[tautannya\].
+Dengan pemahaman ini, Anda dapat dengan mudah mengintegrasikan MyQR ke dalam proyek web Anda untuk manipulasi DOM yang efisien dan interaksi yang ditingkatkan.
 
 Terima kasih telah mengikuti panduan ini, dan semoga sukses dengan pengembangan web Anda!
 
-MyQR
+@MyQR by Nelsen Niko 
