@@ -10,7 +10,7 @@ Daftar Isi
 
 1.  [Pendahuluan](#Pendahuluan)
 2.  [Memulai](#Memulai)
-3.  [Penggunaan Dasar](#PenggunaanDasar)
+3.  [Penggunaan Dasar](#Penggunaan-Dasar)
 4.  [Penggunaan Lanjutan](#PenggunaanLanjutan)
 5.  [Kompatibilitas](#Kompatibilitas)
 6.  [Contoh](#Contoh)
