@@ -1,4 +1,5 @@
-# myqr - myQuery :: Program Uji Coba 
+# myqr - myQuery :: 
+### Program Uji Coba :: Beta Version 
 MyQR adalah sebuah pustaka (library) JavaScript yang diciptakan dan dikembangkan oleh Nelsen Niko. Pustaka ini dirancang untuk menyediakan fungsionalitas dalam pengembangan web, termasuk manipulasi DOM, modifikasi web, dan peningkatan pengembangan web secara umum. Dengan MyQR, pengembang dapat dengan mudah melakukan berbagai operasi pada elemen-elemen HTML, mengirim permintaan AJAX, serta menerapkan animasi dasar seperti fade in dan fade out. MyQR juga memberikan beberapa metode utilitas dan memberikan kemampuan untuk menambahkan lebih banyak metode sesuai kebutuhan pengembangan proyek.
 
 Panduan Lengkap Menggunakan Pustaka JavaScript MyQR
@@ -11,11 +12,11 @@ Daftar Isi
 1.  [Pendahuluan](#Pendahuluan)
 2.  [Memulai](#Memulai)
 3.  [Penggunaan Dasar](#Penggunaan-Dasar)
-4.  [Penggunaan Lanjutan](#PenggunaanLanjutan)
+4.  [Penggunaan Lanjutan](#Penggunaan-Lanjutan)
 5.  [Kompatibilitas](#Kompatibilitas)
 6.  [Contoh](#Contoh)
 7.  [Metode](#Metode)
-8.  [Metode utama dalam pustaka MyQR](#MetodeutamadalampustakaMyQR)
+8.  [Metode utama dalam pustaka MyQR](#Metode-utama-dalam-pustaka-MyQR)
 9.  [Kesimpulan](#Kesimpulan)
 
 Pendahuluan
