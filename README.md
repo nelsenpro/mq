@@ -31,6 +31,9 @@ Memulai
 ```
 <script src="myqr.js"></script>
 ```
+```
+<script src="https://cdn.jsdelivr.net/gh/nelsenpro/myqr/myqr.js"></script>
+```
 ### Inisialisasi MyQR
 
     
