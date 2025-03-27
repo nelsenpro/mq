@@ -49,6 +49,25 @@ const $ = function (selector) {
     return this;
 };
 
+// Pastikan kode hanya dijalankan di browser
+if (typeof document !== "undefined") {
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.mqReadyQueue && Array.isArray(window.mqReadyQueue)) {
+            window.mqReadyQueue.forEach(fn => fn());
+            window.mqReadyQueue = [];
+        }
+    });
+}
+
+// Wrapper agar kode bisa dieksekusi setelah DOM siap
+function mqReady(fn) {
+    if (typeof document !== "undefined" && document.readyState !== "loading") {
+        fn();
+    } else {
+        window.mqReadyQueue = window.mqReadyQueue || [];
+        window.mqReadyQueue.push(fn);
+    }
+};
 
 
 $.prototype = {
@@ -109,24 +128,6 @@ $.prototype = {
         return this.el.length > index ? $(this.el[index]): $(null);
     },
 
-    // CSS manipulation
-    css: function (prop, val) {
-        try {
-            this.el.forEach(function (element) {
-                if (typeof prop === "object") {
-                    for (let key in prop) {
-                        element.style[key] = prop[key];
-                    }
-                } else {
-                    element.style[prop] = val;
-                }
-            });
-        } catch (error) {
-            console.error("Error in css method:",
-                error.message);
-        }
-        return this;
-    },
 
     addClass: function (className) {
         try {
@@ -1319,7 +1320,53 @@ $.prototype = {
     },
 
 };
+$.prototype = {
+    css: function (prop, val) {
+        try {
+            if (!this.el || this.el.length === 0) {
+                console.error("Error: Elemen tidak ditemukan.");
+                return this;
+            }
 
+            this.el.forEach(function (element) {
+                if (typeof prop === "object") {
+                    for (let key in prop) {
+                        element.style[key] = prop[key];
+                    }
+                } else {
+                    element.style[prop] = val;
+                }
+            });
+        } catch (error) {
+            console.error("Error in css method:", error.message);
+        }
+        return this;
+    },
+
+    color: function (color) {
+        try {
+            if (!this.el || this.el.length === 0) {
+                console.error("Error: Elemen tidak ditemukan.");
+                return this;
+            }
+
+            var isValidColor = /^#([0-9A-Fa-f]{3}){1,2}$|^[a-zA-Z]+$|^rgb(a?)(\d{1,3}%?,\s?){3,4}$|^hsl(a?)(\d{1,3}%?,\s?){3,4}$/i.test(color);
+
+            if (!isValidColor) {
+                console.error("Error: Warna tidak valid. Gunakan kode hex (#RRGGBB, #RGB), nama warna CSS, RGB, RGBA, HSL, atau HSLA.");
+                return this;
+            }
+
+            return this.css("color", color);
+
+        } catch (error) {
+            console.error("Error in color method:", error.message);
+        }
+
+        return this;
+    }
+};
+    
 $.prototype.generateColor = function () {
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -1354,3 +1401,5 @@ $.prototype.highlightCSS = function (cssCode) {
 };
 
 const mq = $;
+const mQ = $;
+const MQ = $;
